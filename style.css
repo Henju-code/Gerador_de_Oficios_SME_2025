@@ -5,7 +5,6 @@
 }
 
 #mainContainer {
-    width: 99.2vw;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -14,10 +13,9 @@
 
 .sheetContainer {
     position: relative;
-    margin-top: 20px;
-    height: 1123px;
-    width: 794px;
-    background-color: #fff;
+    height: 297mm;
+    width: 210mm;
+    background-color: #ffffff;
 
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
@@ -37,6 +35,12 @@
     top: 75.21px;
     left: 261.16px;
     z-index: 2;
+}
+
+#watermarkLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .registrationInformation {
