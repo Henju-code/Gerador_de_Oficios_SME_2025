@@ -12,7 +12,7 @@ async def main():
         'args': ['--no-sandbox']
     })
     page = await browser.newPage()
-    await page.goto('file:///C:/Users/junio/OneDrive/Documentos/Work/SME_2025/index.html')
+    await page.goto('file:///C:/Users/PC/Documents/Explore/Gerador_de_Oficios_SME_2025/index.html')
     # await page.screenshot({'path': 'example.png'})
     await page.pdf({
         'path': 'Oficio.pdf',

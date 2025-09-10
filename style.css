@@ -6,10 +6,62 @@
 
 #mainContainer {
     background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: baseline; */
 }
+
+#editorContainer {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    height: 98.5vh;
+    width: 40vw;
+    border-radius: 12px;
+    background-color: #ffffff;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#editorContainer input {
+    display: block;
+}
+
+#editorContainer textarea {
+    width: 80%;
+    resize: none;
+    padding: 5px;
+}
+
+#mainContentInput {
+    height: 60%;
+}
+
+#generatePDFButton {
+    cursor: pointer;
+    /* position: absolute;
+    bottom: 60px;
+    left: 50%; */
+    /* transform: translateX(-50%); */
+
+    height: 50px;
+    width: 180px;
+    border-radius: 8px;
+    background-color: #6d993e;
+    border: none;
+    color: #ffffff;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ######################################################### */
 
 .sheetContainer {
     position: relative;
@@ -57,27 +109,27 @@
 
 #registrationInformationDatetime {
     position: absolute;
-    top: 280.06px;
+    top: 260.06px;
     right: 79.37px;
     font-weight: bold;
 }
 
 .greetingToTheAforementionedAuthority {
     position: absolute;
-    top: 341.66px;
+    top: 321.66px;
     left: 79.37px;
 }
 
 .mainTextIntrodution {
     position: absolute;
-    top: 419.52px;
+    top: 389.52px;
     left: 128.88px;
 }
 
 .mainText {
     position: absolute;
     width: 168mm;
-    top: 120.5mm;
+    top: 115.5mm;
     left: 79.37px;
 }
 
@@ -113,5 +165,12 @@
 .applicantSignature span {
     display: block;
     text-align: center;
+    font-size: 11px;
+}
+
+.applicantSignature span:first-of-type {
+    display: block;
+    text-align: center;
     font-weight:bold;
+    font-size: 14px;
 }
