@@ -114,27 +114,24 @@
     font-weight: bold;
 }
 
-.greetingToTheAforementionedAuthority {
+#greetingToTheAforementionedAuthority {
     position: absolute;
     top: 321.66px;
     left: 79.37px;
 }
 
-.mainTextIntrodution {
+/* .mainTextIntrodution {
     position: absolute;
     top: 389.52px;
     left: 128.88px;
-}
+} */
 
-.mainText {
+#mainText {
     position: absolute;
     width: 168mm;
-    top: 115.5mm;
+    top: 389.52px;
+    /* top: 115.5mm; */
     left: 79.37px;
-}
-
-.mainText p {
-    margin-bottom: 6.7mm;
     text-align: justify;
 }
 

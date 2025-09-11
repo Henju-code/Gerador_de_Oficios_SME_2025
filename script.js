@@ -19,4 +19,40 @@ function handleUpdateDate() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', handleUpdateDate);
+function handleInputToSpan(inputId, spanId) {
+    const input = document.getElementById(inputId);
+    const span = document.getElementById(spanId);
+    const currentYear = new Date().getFullYear();
+
+    if (input && span) {
+        input.addEventListener("input", function () {
+            span.textContent = "Ofício nº" + input.value + "/" + currentYear;
+        });
+    }
+}
+
+function handleTextAreaToSpan(textAreaId, spanId) {
+    const inputArea = document.getElementById(textAreaId);
+    const span = document.getElementById(spanId);
+    const currentYear = new Date().getFullYear();
+
+    if (inputArea && span) {
+        inputArea.addEventListener("input", function () {
+            const formatedText = inputArea.value.replace(/\n/g, "<br>");
+            span.innerHTML = formatedText;
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    handleUpdateDate();
+
+    const bindings = [
+        { input: "numberOfDocumentId", span: "documentId" }
+    ];
+    bindings.forEach(({ input, span }) => handleInputToSpan(input, span));
+
+    handleTextAreaToSpan("greetingAuthorityInput", "greetingToTheAforementionedAuthority")
+    handleTextAreaToSpan("mainContentInput", "mainText")
+});

@@ -13,11 +13,12 @@
     <div id="mainContainer">
         <div id="editorContainer">
             <label for="">Número do Ofício:</label>
-            <input type="number">
+            <input type="number" id="numberOfDocumentId">
             <label for="">Referido:</label>
-            <textarea name="" id=""></textarea>
+            <textarea id="greetingAuthorityInput" >Excelentíssima Senhora,
+Secretária de Educação do Município de Madalena</textarea>
             <label for="">Conteudo do Ofício</label>
-            <textarea name="" id="mainContentInput" placeholder="Digite aqui o conteudo do seu Ofício"></textarea>
+            <textarea name="" id="mainContentInput">Senhora Secretária de Educação,</textarea>
             <button id="generatePDFButton">Gerar Ofício</button>
         </div>
         <div class="sheetContainer">
@@ -25,16 +26,12 @@
             <img class="secretariatLogo" src="./assets/Logo Prefeitura de Madalena e Secretaria da Educação.svg" alt="Logo da SME e Prefeitura">
             <img id="watermarkLogo" src="./assets/Watermark.svg" alt="Watermark">
             <div class="registrationInformation">
-                <span>Ofício nº22/2025</span>
+                <span id="documentId">Ofício nº22/2025</span>
             </div>    
             <span id="registrationInformationDatetime" class="datetime">-</span>
-            <span class="greetingToTheAforementionedAuthority">Excelentíssima Senhora, <br> Secretária de Educação do Município de Madalena</span>
-            <span class="mainTextIntrodution">Senhora Secretária de Educação,</span>
-            <div class="mainText">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla enim, accumsan at imperdiet vitae, egestas at est. Nullam ac mattis odio, sed dignissim neque. Suspendisse sed tempor eros. Nulla sit amet magna magna. Sed hendrerit ut ante a vulputate. Ut dapibus augue sed quam posuere, ut iaculis nisl ullamcorper. Sed suscipit maximus diam, a suscipit quam pretium ac. Duis euismod ut ipsum quis semper. Maecenas a ornare est, porta pellentesque elit. Proin vitae diam blandit, tincidunt turpis et, accumsan purus. Nullam ornare mi magna, euismod pellentesque mauris rutrum sit amet. Aliquam erat volutpat. Praesent ullamcorper nisi nec erat vestibulum interdum. Integer tristique ultrices nisi eu tempus. Duis elementum arcu sit amet tristique sagittis. Maecenas tempor, dui eu venenatis vestibulum, risus turpis tempus mauris, ac hendrerit nisl nunc euismod mi.</p>
-                <p>Maecenas tempor, dui eu venenatis vestibulum, risus turpis tempus mauris, ac hendrerit nisl nunc euismod mi.Maecenas tempor, dui eu venenatis vestibulum, risus turpis tempus mauris, ac hendrerit nisl nunc euismod mi.</p>
-                <p>Maecenas tempor, dui eu venenatis vestibulum, risus turpis tempus mauris, ac hendrerit nisl nunc euismod mi.</p>
-            </div>
+            <p id="greetingToTheAforementionedAuthority">Excelentíssima Senhora, <br> Secretária de Educação do Município de Madalena</p>
+            <!-- <span class="mainTextIntrodution">Senhora Secretária de Educação,</span> -->
+            <p id="mainText">Senhora Secretária de Educação,</p>
             <div class="procedureLastDetails">
                 <span class="datetime">-</span>
                 <span>Atenciosamente,</span>
