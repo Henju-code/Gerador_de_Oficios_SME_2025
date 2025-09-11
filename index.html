@@ -13,20 +13,24 @@
     <div id="mainContainer">
         <div id="editorContainer">
             <label for="">Número do Ofício:</label>
-            <input type="number" id="numberOfDocumentId">
+            <input type="number" id="numberOfDocumentId" placeholder="00">
             <label for="">Referido:</label>
             <textarea id="greetingAuthorityInput" >Excelentíssima Senhora,
 Secretária de Educação do Município de Madalena</textarea>
             <label for="">Conteudo do Ofício</label>
             <textarea name="" id="mainContentInput">Senhora Secretária de Educação,</textarea>
+            <label for="">Nome do Solicitante:</label>
+            <input type="text" id="applicantNameInput" placeholder="Nome do Solicitante">
+            <label for="">CPF do Solicitante:</label>
+            <input type="text" id="cpfInput" maxlength="14" placeholder="000.000.000-00">
             <button id="generatePDFButton">Gerar Ofício</button>
         </div>
-        <div class="sheetContainer">
+        <div class="sheetContainer pagina-a4">
             <img class="mainFrame" src="./assets/Modelo de Oficio - SME 2025.svg" alt="Moldura">
             <img class="secretariatLogo" src="./assets/Logo Prefeitura de Madalena e Secretaria da Educação.svg" alt="Logo da SME e Prefeitura">
             <img id="watermarkLogo" src="./assets/Watermark.svg" alt="Watermark">
             <div class="registrationInformation">
-                <span id="documentId">Ofício nº22/2025</span>
+                <span id="documentId">Ofício nº00/2025</span>
             </div>    
             <span id="registrationInformationDatetime" class="datetime">-</span>
             <p id="greetingToTheAforementionedAuthority">Excelentíssima Senhora, <br> Secretária de Educação do Município de Madalena</p>
@@ -38,8 +42,9 @@ Secretária de Educação do Município de Madalena</textarea>
             </div>
             <div class="applicantSignature">
                 <div id="signatureLine"></div>
-                <span>Juliana Maria Fernandes Pinheiro</span>
-                <span>( Secretária Municipal de Educação )</span>
+                <span id="applicantName">Nome do Solicitante</span>
+                <span id="applicantCPF">000.000.000-00</span>
+                <span>cpf</span>
             </div>
         </div>
     </div>

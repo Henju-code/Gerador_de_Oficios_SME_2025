@@ -38,7 +38,12 @@
 }
 
 #mainContentInput {
-    height: 60%;
+    height: 40%;
+}
+
+#applicantNameInput, #cpfInput {
+    width: 80%;
+    padding: 5px;
 }
 
 #generatePDFButton {
@@ -63,11 +68,32 @@
 
 /* ######################################################### */
 
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .pagina-a4 {
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+  }
+}
+
 .sheetContainer {
     position: relative;
     height: 297mm;
     width: 210mm;
     background-color: #ffffff;
+    border: #6d993e solid 3px;
 
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;

@@ -26,7 +26,7 @@ function handleInputToSpan(inputId, spanId) {
 
     if (input && span) {
         input.addEventListener("input", function () {
-            span.textContent = "Ofício nº" + input.value + "/" + currentYear;
+            span.textContent = spanId === "documentId" ? "Ofício nº" + input.value + "/" + currentYear : input.value;
         });
     }
 }
@@ -44,15 +44,51 @@ function handleTextAreaToSpan(textAreaId, spanId) {
     }
 }
 
+function handleCPFFormater(cpfInput) {
+    cpfInput.addEventListener("input", function () {
+        let inputValue = cpfInput.value.replace(/\D/g, "");
+
+        if (inputValue.length > 11) inputValue = inputValue.slice(0, 11); 
+
+        inputValue = inputValue.replace(/(\d{3})(\d)/, "$1.$2");
+        inputValue = inputValue.replace(/(\d{3})(\d)/, "$1.$2");
+        inputValue = inputValue.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+        cpfInput.value = inputValue;
+    });
+}
+
+function handleGeneratePDF() {
+    document.getElementById("generatePDFButton").addEventListener("click", () => {
+    const elemento = document.getElementById("editorContainer");
+
+    // Esconde o elemento
+    elemento.style.display = "none";
+    // Aguarda um pequeno tempo para o navegador aplicar o CSS antes de abrir o print
+    setTimeout(() => {
+        window.print();
+
+        // (Opcional) Reexibir o elemento depois da impressão
+        elemento.style.display = "flex";
+    }, 100);
+});
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     handleUpdateDate();
 
     const bindings = [
-        { input: "numberOfDocumentId", span: "documentId" }
+        { input: "numberOfDocumentId", span: "documentId" },
+        { input: "applicantNameInput", span: "applicantName" },
+        { input: "cpfInput", span: "applicantCPF" }
     ];
     bindings.forEach(({ input, span }) => handleInputToSpan(input, span));
 
     handleTextAreaToSpan("greetingAuthorityInput", "greetingToTheAforementionedAuthority")
     handleTextAreaToSpan("mainContentInput", "mainText")
+
+    const cpfInput = document.getElementById("cpfInput");
+    handleCPFFormater(cpfInput)
+
+    handleGeneratePDF();
 });
