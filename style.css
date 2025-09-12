@@ -48,11 +48,6 @@
 
 #generatePDFButton {
     cursor: pointer;
-    /* position: absolute;
-    bottom: 60px;
-    left: 50%; */
-    /* transform: translateX(-50%); */
-
     height: 50px;
     width: 180px;
     border-radius: 8px;
@@ -86,6 +81,20 @@
     height: 297mm;
     page-break-after: always;
   }
+}
+
+@media (max-width: 768px) {
+    #editorContainer {
+        position: relative;
+        width: 90vw;
+    }
+
+    #mainContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .sheetContainer {
