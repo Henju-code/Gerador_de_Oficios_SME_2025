@@ -32,7 +32,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="mainContainer">
+    <main>
         <div id="editorContainer">
             <label for="">Número do Ofício:</label>
             <input type="number" id="numberOfDocumentId" placeholder="00">
@@ -47,16 +47,13 @@ Secretária de Educação do Município de Madalena</textarea>
             <input type="text" id="cpfInput" maxlength="14" placeholder="000.000.000-00">
             <button id="generatePDFButton">Gerar Ofício</button>
         </div>
-        <div class="sheetContainer pagina-a4">
-            <img class="mainFrame" src="./assets/Modelo de Oficio - SME 2025.svg" alt="Moldura">
-            <img class="secretariatLogo" src="./assets/Logo Prefeitura de Madalena e Secretaria da Educação.svg" alt="Logo da SME e Prefeitura">
-            <img id="watermarkLogo" src="./assets/Watermark.svg" alt="Watermark">
+        <div class="sheetContainer">
+            <img class="mainFrame" src="./assets/Modelo de Oficio - SME 2025.png" alt="Moldura">
             <div class="registrationInformation">
                 <span id="documentId">Ofício nº00/2025</span>
             </div>    
             <span id="registrationInformationDatetime" class="datetime">-</span>
             <p id="greetingToTheAforementionedAuthority">Excelentíssima Senhora, <br> Secretária de Educação do Município de Madalena</p>
-            <!-- <span class="mainTextIntrodution">Senhora Secretária de Educação,</span> -->
             <p id="mainText">Senhora Secretária de Educação,</p>
             <div class="procedureLastDetails">
                 <span class="datetime">-</span>
@@ -69,6 +66,6 @@ Secretária de Educação do Município de Madalena</textarea>
                 <span>cpf</span>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

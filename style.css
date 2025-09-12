@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 
-#mainContainer {
+body {
     background-color: #000;
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: baseline; */
 }
 
 #editorContainer {
@@ -64,22 +61,26 @@
 /* ######################################################### */
 
 @page {
-  size: A4;
+  size: A4 portrait;
   margin: 0;
 }
 
 @media print {
   html, body {
+    width: 210mm;
+    height: 297mm;
     margin: 0;
     padding: 0;
-    width: 210mm;
-    height: 297mm;
   }
 
-  .pagina-a4 {
+  .sheetContainer {
     width: 210mm;
     height: 297mm;
+    min-width: 210mm;
+    min-height: 297mm;
+    background: #fff;
     page-break-after: always;
+    margin: 0 auto;
   }
 }
 
@@ -102,7 +103,6 @@
     height: 297mm;
     width: 210mm;
     background-color: #ffffff;
-    border: #6d993e solid 3px;
 
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
@@ -113,26 +113,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
-}
-
-.secretariatLogo {
-    position: absolute;
-    width: 268.34px;
-    top: 75.21px;
-    left: 261.16px;
-    z-index: 2;
-}
-
-#watermarkLogo {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
 }
 
 .registrationInformation {
     position: absolute;
-    width: 100%;
     font-weight: bold;
     top: 217.70px;
     left: 79.37px;
@@ -155,17 +140,10 @@
     left: 79.37px;
 }
 
-/* .mainTextIntrodution {
-    position: absolute;
-    top: 389.52px;
-    left: 128.88px;
-} */
-
 #mainText {
     position: absolute;
     width: 168mm;
     top: 389.52px;
-    /* top: 115.5mm; */
     left: 79.37px;
     text-align: justify;
 }
